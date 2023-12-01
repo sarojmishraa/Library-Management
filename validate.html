@@ -1,0 +1,102 @@
+
+function validate()
+{
+var txt= document.myform.name; <!-- name -->
+var txt1 = document.myform.fname; <!-- fathername -->
+var txt2 = document.myform.nation; <!-- nation -->
+var txt3 = document.myform.occ; <!-- occupation -->
+var num = document.myform.uid; <!-- userid -->
+var num1 = document.myform.id; <!-- idno -->
+var lno = document.myform.deg; <!-- lastdegree -->
+var lno1 = document.myform.add; <!-- address -->
+var pass = document.myform.pass; <!-- password -->
+var dob = document.myform.dob; <!-- dateofbirth -->
+var eml = document.myform.eml; <!-- email -->
+
+
+var letters = /^[A-Za-z]+$/;
+var numbers = /^[0-9]+$/;
+var letterno = /^[0-9a-zA-Z]+$/;
+var password = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/; 
+var date = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/; 
+var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+if(txt.value.match(letters))
+{return true;}
+else
+{alert ('enter valid name');
+return false;}
+}
+
+if(txt1.value.match(letters))
+{return true;}
+else
+{alert ('enter valid father name');
+return false;}
+}
+
+if(txt2.value.match(letters))
+{return true;}
+else
+{alert ('enter valid nationality');
+return false;}
+}
+
+if(txt3.value.match(letters))
+{return true;}
+else
+{alert ('enter valid occupation');
+return false;}
+}
+
+if(num.value.match(numbers))
+{return true;}
+else
+{alert ('enter valid userid');
+return false;}
+}
+
+if(num1.value.match(numbers))
+{return true;}
+else
+{alert ('enter valid id_no');
+return false;}
+}
+
+if(lno.value.match(letterno))
+{return true;}
+else
+{alert ('enter valid degree');
+return false;}
+}
+
+if(lno1.value.match(letterno))
+{return true;}
+else
+{alert ('enter valid address');
+return false;}
+}
+
+if(pass.value.match(password))
+{return true;}
+else
+{alert ('your password must have between 7 to 15 characters which contain at least one numeric digit and a special character');
+return false;}
+}
+
+if(dob.value.match(date))
+{return true;}
+else
+{alert ('enter valid date');
+return false;}
+}
+
+if(eml.value.match(email))
+{return true;}
+else
+{alert ('enter valid email');
+return false;}
+}
+
+
+

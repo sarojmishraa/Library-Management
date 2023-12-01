@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #236C0A;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+body{
+    background-image: url("464615957.jpg");
+    background-repeat: no-repeat;
+   
+
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+  <head>
+    <script type="text/javascript">
+        
+function validate()
+{
+  
+var txt = document.myform.name;
+var txt1 = document.myform.fname;
+var txt2 = document.myform.nation;
+var txt3 = document.myform.occ; 
+var num = document.myform.uid; 
+var num1 = document.myform.id; 
+var lno = document.myform.deg; 
+var lno1 = document.myform.add; 
+var pass = document.myform.pass; 
+var dob = document.myform.dob; 
+var eml = document.myform.eml;
+
+var letters = /^[A-Za-z]+$/;
+var numbers = /^[0-9]+$/;
+var letterno = /^[0-9a-zA-Z]+$/;
+var password = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/; 
+var date = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/; 
+var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
+if(validatename(txt))
+
+  {
+    if(validateuserid(num))
+      { 
+        if(validatepassword(pass))
+        {
+            if(validatenation(txt2))
+
+              {if(validatedob(dob)) 
+
+                {if(validateid(num1))
+
+                  {if(validatefname(txt1)) 
+
+                    {if(validateaddress(lno1))
+
+                     {if(validateemail(eml)) 
+
+                      {if(validatedegree(lno)) 
+
+                        {if(validateoccu(txt3)) {}
+                        }
+                      }
+                     }
+                    }
+                  }
+                } 
+              }
+        }
+        
+
+        
+      } 
+
+  
+  } 
+  return false;
+
+  
+
+
+function validatename(txt)
+{
+if(txt.value.match(letters))
+
+{
+  return true;
+}
+else
+{
+  alert ('enter valid name');
+  return false;
+  }}
+
+function validateuserid(num)
+{
+  if(num.value.match(numbers))
+
+{ 
+  return true;
+}
+else
+{ alert ('enter valid userid');
+ return false;
+}
+}
+
+function validatepassword(pass)
+{
+  if(pass.value.match(letters))
+   {
+    return true;
+  }
+else
+ {
+  alert ('your password must have between 7 to 15 characters which contain at least one numeric digit and a special character');
+      return false;
+}
+}
+
+function validatedegree(lno)
+{
+  if(lno.value.match(letterno))
+   {
+    return true;
+   }
+  else
+    {
+      alert ('enter valid degree');
+      return false;
+    }
+}
+
+
+function validatenation(txt2)
+{ if(txt2.value.match(letters))
+   {
+    return true;
+   }
+else
+   {
+    alert ('enter valid nationality');
+    return false;
+  }
+}
+
+function validatedob(dob)
+{ if(dob.value.match(date))
+   {
+    return true;
+  }
+else
+  {
+    alert ('enter valid date');
+    return false;
+  }
+}
+
+
+function validateid(num1)
+{if(num1.value.match(numbers))
+   {
+    return true;
+  }
+else
+   {
+    alert ('enter valid id_no');
+    return false;
+  }
+}
+
+function validatefname(txt1)
+{if(txt1.value.match(letters))
+   {
+    return true;
+  }
+else
+   {
+    alert ('enter valid father name');
+    return false;
+  }
+}
+
+function validateaddress(lno1)
+{if(lno1.value.match(letterno))
+    {
+      return true;
+    }
+else
+   {
+    alert ('enter valid address');
+    return false;
+  }
+}
+
+function validateemail(eml)
+{if(eml.value.match(email))
+   {
+    return true;
+  }
+else
+    {
+      alert ('enter valid email');
+      return false;
+    }
+}
+
+function validateoccu(txt3)
+{if(txt3.value.match(letters))
+   {
+    return true;
+  }
+else
+    {
+      alert ('enter valid occupation');
+      return false;
+    }
+}
+
+
+
+
+}
+    </script>
+  </head>
+  <body>
+
+<form name='myform' onSubmit="return validate()" action="form1.php" method="post">
+
+  <table width="100%" >
+<tbody>
+<tr>
+    <td align="center"> 						 
+      </td>
+  </tr>
+    <tr> 
+      <td><table width="100%" border="0">
+          <tbody><tr>
+            <td width="16%" align="left" valign="top"></td>
+            
+            <td width="68%"> 
+              <table width="100%" border="0">
+                <tbody><tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody><tr> 
+                        <td width="1%">&nbsp;</td>
+                        <td colspan="4" align="center">
+						</td>
+                      </tr>
+                      <tr > 
+                        <td colspan="5" align="center">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            
+                            <tbody><tr> 
+                              <td width="24%"></td>
+                               <td width="52%" align="center"><strong><font size="5">User Registration Form</font></strong></td>
+                              <td width="24%">&nbsp;</td>
+                            </tr>
+                            
+                          </tbody></table></td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td width="9%">&nbsp;</td>
+                        <td width="19%">&nbsp;</td>
+                        <td width="67%">&nbsp;</td>
+                        <td width="4%">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Name</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="name" size="50"  placeholder="Your name.."  >
+                          </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+					   <tr> 
+                        <td height="10">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">User ID</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="uid" size="25" placeholder="Your ID..">
+                          </td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  <tr> 
+                        <td height="10">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Password</font>&nbsp;</td>
+                        <td align="left"><input type="password" name="pass" size="25" placeholder="enter your password..">
+                          </td>
+                        <td>&nbsp;</td>
+                      </tr>
+					   <tr> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Nationality</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="nation" size="30" placeholder="Your country..">
+                          </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td height="10">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="left"><strong></strong></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Date Of Birth</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="dob" placeholder="Your date of birth.."></td>
+                           
+                        </td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  
+					  <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Identity Proof</font>&nbsp;</td>
+                        <td align="left"><select name="idlist" id="idlist">
+                            <option value="voterid" selected="selected">Voter 
+                            ID Card</option>
+                            <option value="pan">PAN Card</option>
+                            <option value="passport">Passport</option>
+                            <option value="ration">Ration Card</option>
+                            <option value="license">Driving License</option>
+                          </select>
+                          <strong><font size="4"> 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           
+                        </td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  
+					  
+					  <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Father's Name</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="fname" size="50" placeholder="Your father's name..">
+                          </td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  <tr> 
+                        <td height="10">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Address</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="add" size="50" placeholder="Your address..">
+                          </td>
+                       
+					  <tr> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Email</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="eml" size="50" placeholder="Your email..">
+                          </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td height="10">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Last Degree</font><strong>&nbsp;</strong></td>
+                        <td align="left"><input type="text" name="deg" size="50" placeholder="Your Last Degree.." >
+                          <strong></strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td align="right"><font size="4">Occupation</font>&nbsp;</td>
+                        <td align="left"><input type="text" name="occ" size="50" placeholder="Your occupation..">
+                          <strong></strong></td>
+                        <td>&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td height="10">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+					  <tr> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+					  
+                      <tr>
+					  <td colspan="120" align="center">
+					  <input type="submit" name="submit" value="Submit">
+					  
+					  </td>
+					  </tr>
+                          </tbody></table> 
+                          &nbsp;&nbsp; </td>
+                        <td>&nbsp;</td>
+                      </tr> 
+                      <tr> 
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td colspan="2" align="center">&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </tbody></table>
+					   </td>
+                </tr>
+              </tbody></table> 
+              
+            </td>
+            <td width="16%">&nbsp;</td>
+          </tr>
+        </tbody></table></td>
+  </tr>
+</tbody></table>
+</form>
+
+
+</body>
+</html>

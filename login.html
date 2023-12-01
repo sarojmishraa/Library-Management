@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+
+
+
+ <head>
+    <script type="text/javascript">
+function validate()
+{
+  
+var txt = document.myform.name;
+ var pass = document.myform.pass; 
+
+var letters = /^[A-Za-z]+$/;
+var password = /^[A-Za-z]+$/; 
+
+
+if(validatename(txt))
+
+  {
+    if(validatepassword(pass))
+      { 
+        } 
+} 
+  return false;
+
+  
+
+
+function validatename(txt)
+{
+if(txt.value.match(letters))
+
+{
+  return true;
+}
+else
+{
+  alert ('enter valid name');
+  return false;
+  }}
+
+
+function validatepassword(pass)
+{
+  if(pass.value.match(password))
+   {
+    return true;
+  }
+else
+ {
+  alert ('your password must be valid with no numerics!');
+      return false;
+}
+}
+}
+</script>
+
+    <title>
+        LOG IN
+    </title>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+  </head>
+  <body bgcolor="#f2f2f2">
+        <table id="h" >
+<form name='myform' onSubmit="validate()"  action="check.php" method="post">
+<tr>
+<th class="user" >Username:</th>
+<th><input type="text" placeholder="username" name="name"></br></th>
+</tr>
+<tr>
+<th class="user">Password:</th>
+<th><input type="password" placeholder="password" name="pass"></br></th>
+</tr>
+<tr>
+<th><input type="submit" name="submit" value="Submit"></th>
+
+</tr>
+</form>
+
+  
+  
+ </body>
+</html>
